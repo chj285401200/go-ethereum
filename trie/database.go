@@ -190,7 +190,7 @@ func gatherChildren(n node, children *[]common.Hash) {
 	case hashNode:
 		*children = append(*children, common.BytesToHash(n))
 
-	case valueNode, nil:
+	case valueNode:
 
 	default:
 		panic(fmt.Sprintf("unknown node type: %T", n))
